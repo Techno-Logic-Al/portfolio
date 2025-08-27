@@ -1,0 +1,37 @@
+@use "sass:map";
+
+$colors: (
+    almost-black          : #0d0e0c,
+    almost-white          : rgba(235, 230, 227, 0.706),
+    subtle-orange         : #cd4409   
+);
+
+$breakpoints: (
+    s  : 576px,
+    m  : 768px,
+    l  : 992px,
+    xl : 1200px
+);
+
+@mixin color($name, $property: color) {  
+                                        
+                                         
+    @if map.has-key($colors, $name) {    
+        $value: map.get($colors, $name); 
+        #{$property}: $value;            
+    } @else {
+        @warn "Color '#{$name}' not found in the $colors map."; 
+    }
+}
+
+@mixin mq($value) {                           
+                                              
+    @if map.has-key($breakpoints, $value) {   
+        $size: map.get($breakpoints, $value);  
+        @media (min-width: $size) {           
+            @content;                         
+        }
+    } @else { 
+        @warn "unknown breakpoint '#{$breakpoints}'";
+    }
+}

@@ -1,0 +1,64 @@
+@use"../base" as *;
+@use"../utilities" as *;
+
+.coding-examples {
+    height: 100vh;
+    width: 100%;
+    background-image: url("../images/background.png");
+    background-size: cover;
+    background-position: top left;
+    background-repeat: no-repeat; 
+    
+}
+
+.coding-examples-container {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 20px 15px;
+}
+
+.coding-examples-content {
+    height: 100%;
+    max-width: 600px;
+    margin-top: 30px;
+    padding: 10px 10px;
+    text-align: center;
+
+    h1 {
+        font-size: 1.5rem;
+        text-shadow: 1px 1px 2px black;
+        @include color(subtle-orange);
+        @include mq(l){
+            font-size: 2rem;
+        }
+    }
+
+    p {
+        font-size: 1.2rem;
+        text-shadow: 1px 1px 2px black;
+        margin: 20px 0;
+        @include color(almost-white);
+    }
+
+    ul {
+        @include color(almost-white);
+    }
+}
+
+.coding-examples-container {
+    display: flex;
+    justify-content: center;
+}
+
+.coding-examples-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
