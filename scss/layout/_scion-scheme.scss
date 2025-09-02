@@ -13,7 +13,7 @@
 
 .scion-scheme-container {
     width: 100%;
-    height: auto;
+    height: 100vh;
     margin: 0;
     padding: 20px 15px;
 }
@@ -40,9 +40,9 @@
     }
 
     p {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         margin: 0px 0;
-        text-align: center;
+        text-align: start;
         text-shadow: 1px 1px 2px black;
         @include color(almost-white);
     }
