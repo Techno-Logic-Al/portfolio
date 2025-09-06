@@ -1,11 +1,8 @@
-import { getRandomNumber, toggleSidebar } from "./sidebar.js";
-import { toggleBurgerMenu, bannerExplosion } from "./banner.js";
+import { toggleSidebar } from "./sidebar.js";
+import { toggleBurgerMenu } from "./banner.js";
 import { validateContactForm } from "./formValidation.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-  const number = getRandomNumber();
-  console.log("Random number:", number);
-
   const toggleBtn = document.querySelector("#sidebarToggle");
 
   if (toggleBtn) {
@@ -13,7 +10,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   toggleBurgerMenu();
-  bannerExplosion();
 
   const form = document.querySelector(".contact-box");
 

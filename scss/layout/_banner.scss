@@ -97,28 +97,6 @@ header {
     flex-direction: column;
 }
 
-
-// === Banner Particle Explosion ===
-.banner {
-    position: relative;
-    overflow: hidden;
-    --particle-nudge-y: -2; // alignment offset for particle baseline (px)
-    --particle-nudge-x: 0; // alignment offset for horizontal positioning (px)
-
-
-    #bannerCanvas {
-        position: absolute;
-        inset: 0;
-        display: block;
-        pointer-events: none;
-        opacity: 1;
-        transition: opacity 600ms ease;
-        &.fade-out {
-            opacity: 0;
-        }
-    }
-}
-
 .banner-content {
     position: relative;
     z-index: 2;
@@ -126,19 +104,17 @@ header {
     place-items: center;
     text-align: center;
     gap: 0.75rem;
-    padding: clamp(2rem, 6vw, 6rem) 1rem;
+    padding: 1rem;
 }
 
 #bannerTitle {
     @include color(almost-white);
     text-shadow: 0 12px 40px rgba(0,0,0,0.35);
-    transition: transform 700ms cubic-bezier(.2,.9,.2,1), opacity 700ms ease;
 }
 
 #bannerSubtitle {
     @include color(almost-white);
     text-shadow: 0 8px 30px rgba(0,0,0,0.2);
-    transition: transform 700ms cubic-bezier(.2,.9,.2,1), opacity 700ms ease;
 }       
 
 #bannerTitle {
@@ -146,31 +122,12 @@ header {
     font-weight: 700;
     letter-spacing: 0.02em;
     line-height: 1.05;
-    font-size: clamp(3rem, 9vw, 8rem);
+    font-size: 3rem;
 }
 
 #bannerSubtitle {
     font-weight: 600;
     opacity: .9;
     line-height: 1.2;
-    font-size: clamp(1.1rem, 3.2vw, 2.25rem);
-    // Align particle animation with the subtitle text
-    --particle-nudge-y: 8; // positive pushes particles DOWN
-    --particle-nudge-x: 0; // adjust if needed
-}
-
-/* Start hidden; reveal after canvas animation */
-.headline-hidden {
-    opacity: 0;
-    transform: translateY(18px) scale(0.98);
-    visibility: hidden;
-    visibility: hidden;
-}
-
-.reveal-headline #bannerTitle,
-.reveal-headline #bannerSubtitle {
-    opacity: 1;
-    transform: none;
-    visibility: visible;
-    visibility: visible;
+    font-size: 2.25rem;
 }
