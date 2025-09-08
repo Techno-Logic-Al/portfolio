@@ -1,0 +1,14 @@
+@use "sass:map";
+
+// Centralized color palette
+$colors: (
+  almost-black: #0d0e0c,
+  almost-white: rgba(235, 230, 227, 0.706),
+  subtle-orange: #cd4409
+);
+
+// Utility placeholder for subtle-orange text
+%text-subtle-orange {
+  color: map.get($colors, subtle-orange);
+}
+

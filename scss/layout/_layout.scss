@@ -1,0 +1,46 @@
+//base styles for layout
+
+* {
+    box-sizing: border-box; 
+}
+
+body { 
+    font-family: "Zen Dots", sans-serif;
+    font-size: 1rem;
+    letter-spacing: .5px;
+    margin: 0;
+}
+
+h1 {
+    margin: 0; 
+}
+
+h3 {
+    margin: 0; 
+}
+
+.container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 20px 15px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.page-position {
+    display: flex;
+    flex-direction: row;
+}
+
+.main-content {
+    flex: 1;
+}
