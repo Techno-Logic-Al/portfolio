@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <meta name="ROBOTS" content="NOINDEX,NOFOLLOW"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/style.min.css"/>
+    <title>AG's portfolio</title>
+  </head>
+
+  <body>
+    <div class="page-position">
+      <div id="sidebar">
+        <div class="sidebar-content">
+          <div class="my-initials-box">
+            <div class="my-initials">
+              <a class="btt-link" href="index.html">aG</a>
+            </div>
+          </div>
+          <div class="sidebar-list-box">
+            <ul>
+              <li><a href="about-me.html">about me</a></li>
+              <li><a href="index.html#portfolio">portfolio</a></li>
+              <li><a href="coding-examples.html">coding examples</a></li>
+              <li><a href="scion-scheme.html">scion scheme</a></li>
+            </ul>
+          </div>
+          <div class="contact-me-box">
+            <a href="#contact-me">
+              <div class="contact-me-sb">contact me</div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="main-content">
+        <header>
+          <div class="banner">
+            <div class="banner-particles"></div>
+            <div class="banner-message zen-dots">
+              <a href="about-me.html">
+                <h1 class="banner-name">
+                  <span class="banner-line">alastair</span>
+                  <span class="banner-line">Grandison</span>
+                </h1>
+              </a>
+              <a href="about-me.html">
+                <img class="banner-pic" src="./images/AG.jpg" alt="an image of Alastair Grandison"/>
+              </a>
+              <a href="coding-examples.html">
+                <h2 class="banner-role">
+                  <span class="banner-line">coder</span>
+                  <span class="banner-line">&amp; web</span>
+                  <span class="banner-line">developer</span>
+                </h2>
+              </a>
+              <a href="#portfolio">
+                <h2 class="banner-welcome">
+                  <span class="banner-line">welcome to</span>
+                  <span class="banner-line">my portfolio</span>
+                </h2>
+              </a>
+            </div>
+            <button class="header-btn" type="button" id="sidebarToggle">
+              <span class="burger-menu burger-line-1"></span>
+              <span class="burger-menu burger-line-2"></span>
+              <span class="burger-menu burger-line-3"></span>
+            </button>
+          </div>
+        </header>
+        <div class="container portfolio-bg" id="portfolio">
+          <div class="portfolio">
+            <div class="project project-1">
+              <a href="https://techno-logic-al.github.io/rebuilding-netmatters-webpage/" target="_blank" rel="noopener noreferrer">
+                <img src="images/Rebuilding-Netmatters-Webpage.png" alt="an image of my netmatters webpage rebuild"/>
+              </a>
+              <a href="https://techno-logic-al.github.io/Rebuilding-Netmatters-Webpage/" target="_blank" rel="noopener noreferrer">
+                <h2 class="portfolio-h2">netmatters website</h2>
+              </a>
+              <p>this project rebuilt the netmatters homepage from scratch</p>
+              <h3>JavaScript, HTML & Sass</h3>
+            </div>
+            <div class="project project-2">
+              <a href="https://techno-logic-al.github.io/portfolio/" target="_blank" rel="noopener noreferrer">
+                <img src="images/portfolio.png" alt="An image of my portfolio"/>
+              </a>
+              <a href="https://techno-logic-al.github.io/portfolio/" target="_blank" rel="noopener noreferrer">
+                <h2 class="portfolio-h2">portfolio<br>website</h2>
+              </a>  
+              <p>this project created a<br>portfolio of my coding work</p>
+              <h3>JavaScript, HTML & Sass</h3>
+            </div>
+            <div class="project project-3">
+              <a href="https://techno-logic-al.github.io/javascript-array/" target="_blank" rel="noopener noreferrer">
+                <img src="images/Pick-a-pic!.png" alt="an image of my Pick-a-pic app"/>
+              </a>
+              <a href="https://techno-logic-al.github.io/javascript-array/" target="_blank" rel="noopener noreferrer">
+                <h2 class="portfolio-h2">pick-a-pic!<br>app</h2>
+              </a>
+              <p>this project builds galleries of favourite images</p>
+              <h3>JavaScript, HTML & Sass</h3>
+            </div>
+            <div class="project project-4">
+              <img src="images/placeholder.png" alt="A 'coming soon!' placeholder image"/>
+              <h2 class="portfolio-h2">coming soon</h2>
+            </div>
+            <div class="project project-5">
+              <img src="images/placeholder.png" alt="A 'coming soon!' placeholder image"/>
+              <h2 class="portfolio-h2">coming soon</h2>
+            </div>
+            <div class="project project-6">
+              <img src="images/placeholder.png" alt="A 'coming soon!' placeholder image"/>
+              <h2 class="portfolio-h2">coming soon</h2>
+            </div>
+          </div>
+        </div>
+        <div class="container contact-info-bg">
+          <div class="contact-info" id="contact-me">
+            <div class="blurb">
+              <h3 class="contact-me">contact me</h3>
+              <p>for further information or<br>to discuss working together<br>on a project you have in mind, <br>please contact me:</p>
+              <p>07941 233159<br>alastairgrandison@rocketmail.com</p>
+            </div>
+            <form class="contact-box">
+              <div class="contact-row">
+                <div class="search-bar-container">
+                  <input class="search-bar" name="firstName" placeholder="first name:" type="text" minlength="2" required/>
+                  <!-- Required is a fallback validation for if JavaScript is not working -->
+                </div>
+                <div class="search-bar-container">
+                  <input class="search-bar" name="lastName" placeholder="last name:" type="text" minlength="2" required/>
+                </div>
+              </div>
+              <div class="contact-row">
+                <div class="search-bar-container">
+                  <input class="search-bar" name="email" placeholder="email address:" type="email" required/>
+                </div>
+                <div class="search-bar-container">
+                  <input class="search-bar" name="subject" placeholder="subject:" type="text" minlength="3" required/>
+                </div>
+              </div>
+              <div class="text-area-container">
+                <textarea class="text-area" name="textArea" placeholder="message:" minlength="1" maxlength="1000" required></textarea>
+              </div>
+              <button class="contact-button" type="submit">submit</button>
+            </form>
+          </div>
+        </div>
+        <footer>
+          <div class="back-to-top">
+            <a class="btt-link" href="index.html">back to top</a>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>
+
+
+
+
