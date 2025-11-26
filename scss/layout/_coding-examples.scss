@@ -1,6 +1,15 @@
 @use"../base" as *;
 @use"../utilities" as *;
 
+.coding-examples {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url("../images/background.png");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 100% 100%;
+}
+
 .coding-examples-container {
     width: 100%;
     justify-content: center;
@@ -20,8 +29,9 @@
 
     h1 {
         font-size: 1.4rem;
-        margin: 2rem 0  0;
+        margin: 30px 0 0;
         text-shadow: 1px 1px 2px black;
+        background-color: transparent;
         @include color(subtle-orange);
         @include mq(l){
             font-size: 1.8rem;
@@ -30,11 +40,21 @@
 
     h2 {
         font-size: 0.9rem;
-        margin-top: 0rem;
+        margin: 28px 0 10px;
         text-shadow: 1px 1px 2px black;
         @include color(almost-white);
         @include mq(l){
             font-size: 1.3rem;
+        }
+    }
+
+    h3 {
+        font-size: 0.9rem;
+        margin: 0 0 10px;
+        text-shadow: 1px 1px 2px black;
+        @include color(subtle-orange);
+        @include mq(l){
+            font-size: 1.1rem;
         }
     }
 
@@ -63,25 +83,25 @@
     display: flow-root; /* prevent margin collapse; keep background aligned */
 }
 
-/* Tile container: exactly one background tile high (1536:1024 => 3:2) */
 .responsive-nav-tile {
     width: 100%;
-    aspect-ratio: 3 / 2; /* height = 2/3 of width */
-    display: grid;
-    grid-template-rows: auto auto 1fr; /* h1, h2, image fills remainder */
 }
 
-.responsive-nav-tile h1 {
-    margin-top:2rem;
+.responsive-nav-pair {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 16px;
+    max-width: 80%;
+    margin: 0 auto 5px;
 }
 
-.responsive-nav-tile img {
-    align-self: end;       /* sit on the tile bottom edge */
-    justify-self: center;  /* centered under headings */
-    height: auto;          /* scale naturally; bottom aligns to tile */
-    width: auto;           /* preserve aspect ratio */
-    max-width: 53%;        /* reduce overall size to match layout */
-    object-fit: contain;   /* don't crop tall image */
+.responsive-nav-pair img {
+    width: 45%;
+    max-width: 45%;
+    height: auto;
+    border-radius: 5px;
+    align-self: flex-start;
 }
 
 .responsive-nav-images {
@@ -99,4 +119,9 @@
     }
     .nav-img-2 { width: 100%; }
     .nav-img-3 { width: var(--img3-width, 62%); }
+}
+
+.layout-section img {
+    max-width: 35%;
+    height: auto;
 }

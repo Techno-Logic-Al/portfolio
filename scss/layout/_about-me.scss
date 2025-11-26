@@ -60,3 +60,14 @@
     align-items: center;
 
 }
+
+.about-me-content a.link-subtle-orange {
+    text-decoration: underline;
+    text-decoration-color: map-get($colors, subtle-orange);
+    @include color(subtle-orange);
+
+    &:hover {
+        text-decoration-color: map-get($colors, almost-white);
+        @include color(almost-white);
+    }
+}
