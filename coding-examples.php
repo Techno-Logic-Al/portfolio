@@ -53,6 +53,26 @@ require_once __DIR__ . '/includes/head.php';
               <img class="layout-related tweaks pic" src="./images/code from pick-a-pick's layout js file.png" alt="an image of JavaScript code showing layout-related tweaks"/>
             </div>
 
+            <div class="mail.php-section">
+              <h2>config/mail.php</h2>
+              <h3>PHP</h3>
+              <p>
+                defines a sendContactEmail() function that uses PHPMailer to send an email when the contact form is successfully submitted. It reads SMTP settings (host, port, user, password, encryption, from/to addresses) from a .env file, configures PHPMailer with those values, and builds a plain‑text email body containing the submitted name, company, email, telephone, and message. The function then tries to send the email and returns true on success or false if anything goes wrong.
+              </p>
+              <img class="config mail PHP pic" src="./images/config mail PHP.png" alt="an image of PHP code defining a function that uses PHPMailer"/>
+            </div>
+
+            <div class="index.php-section">
+              <h2>index.php</h2>
+              <h3>PHP</h3>
+              <p>
+                loads a database connection and defines a renderNewsSection function that queries the latest three news posts, escapes their data, and builds an HTML news section. It then reads a static index.php.html template, finds the existing news section block, and replaces it with the dynamically generated news section. Finally, it extracts the main content from that HTML, outputs it between a shared header and footer, and renders the complete page.
+              </p>
+              <div class="responsive-nav-pair">
+              <img class="rendering news section pic" src="./images/rendering news section pic 1.png" alt="first image of PHP code rendering a news section"/>
+              <img class="rendering news section pic" src="./images/rendering news section pic 2.png" alt="second image of PHP code rendering a news section"/>
+            </div>
+
           </div>
         </div>
       </div>
