@@ -238,31 +238,31 @@ require_once __DIR__ . '/includes/head.php';
         <div class="container portfolio-bg" id="portfolio">
           <div class="portfolio">
             <div class="project project-1">
-              <a href="https://techno-logic-al.github.io/rebuilding-netmatters-webpage/" target="_blank" rel="noopener noreferrer">
+              <a href="https://netmatters.alastair-grandison.netmatters-scs.co.uk/" target="_blank" rel="noopener noreferrer">
                 <img src="images/Rebuilding-Netmatters-Webpage.png" alt="an image of my netmatters webpage rebuild"/>
               </a>
-              <a href="https://techno-logic-al.github.io/Rebuilding-Netmatters-Webpage/" target="_blank" rel="noopener noreferrer">
+              <a href="https://netmatters.alastair-grandison.netmatters-scs.co.uk/" target="_blank" rel="noopener noreferrer">
                 <h2 class="portfolio-h2">netmatters website</h2>
               </a>
               <p>this project rebuilt the netmatters homepage from scratch</p>
               <h3>HTML, Sass<br>JavaScript & PHP</h3>
             </div>
             <div class="project project-2">
-              <a href="https://techno-logic-al.github.io/portfolio/" target="_blank" rel="noopener noreferrer">
+              <a href="https://alastair-grandison.netmatters-scs.co.uk/" target="_blank" rel="noopener noreferrer">
                 <img src="images/portfolio.png" alt="An image of my portfolio"/>
               </a>
-              <a href="https://techno-logic-al.github.io/portfolio/" target="_blank" rel="noopener noreferrer">
+              <a href="https://alastair-grandison.netmatters-scs.co.uk/" target="_blank" rel="noopener noreferrer">
                 <h2 class="portfolio-h2">portfolio<br>website</h2>
               </a>  
               <p>this project created a<br>portfolio of my coding work</p>
               <h3>HTML, Sass<br>JavaScript & PHP</h3>
             </div>
             <div class="project project-3">
-              <a href="https://techno-logic-al.github.io/javascript-array/" target="_blank" rel="noopener noreferrer">
+              <a href="https://js-array.alastair-grandison.netmatters-scs.co.uk/" target="_blank" rel="noopener noreferrer">
                 <img src="images/Pick-a-pic!.png" alt="an image of my Pick-a-pic app"/>
               </a>
-              <a href="https://techno-logic-al.github.io/javascript-array/" target="_blank" rel="noopener noreferrer">
-                <h2 class="portfolio-h2">pick-a-pic!<br>app</h2>
+              <a href="https://js-array.alastair-grandison.netmatters-scs.co.uk/" target="_blank" rel="noopener noreferrer">
+                <h2 class="portfolio-h2">pick-a-pic!<br>web app</h2>
               </a>
               <p>this project builds galleries of favourite images</p>
               <h3>HTML, Sass<br>JavaScript</h3>
