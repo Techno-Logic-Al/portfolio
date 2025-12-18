@@ -53,7 +53,7 @@ require_once __DIR__ . '/includes/head.php';
               <img class="layout-related tweaks pic" src="./images/code from pick-a-pick's layout js file.png" alt="an image of JavaScript code showing layout-related tweaks"/>
             </div>
 
-            <div class="mail.php-section">
+            <div class="mail-php-section">
               <h2>config/mail.php</h2>
               <h3>PHP</h3>
               <p>
@@ -62,7 +62,7 @@ require_once __DIR__ . '/includes/head.php';
               <img class="config mail PHP pic" src="./images/config mail PHP.png" alt="an image of PHP code defining a function that uses PHPMailer"/>
             </div>
 
-            <div class="index.php-section">
+            <div class="index-php-section">
               <h2>index.php</h2>
               <h3>PHP</h3>
               <p>
@@ -71,6 +71,17 @@ require_once __DIR__ . '/includes/head.php';
               <div class="responsive-nav-pair">
               <img class="rendering news section pic" src="./images/rendering news section pic 1.png" alt="first image of PHP code rendering a news section"/>
               <img class="rendering news section pic" src="./images/rendering news section pic 2.png" alt="second image of PHP code rendering a news section"/>
+            </div>
+
+             <div class="employee-from-avatars-seeder-section">
+              <h2>EmployeeFromAvatarsSeeder.php</h2>
+              <h3>PHP</h3>
+              <p>
+                builds a realistic employee dataset directly from a folder of avatar images. It scans storage/app/public/seed-avatars/female and seed-avatars/male on the public disk, filters the .webp files, and tags each one with a gender. It then shuffles the avatars, limits them to 60, and distributes them across the existing companies so that every company gets at least one employee and no company gets more than five. For each avatar it derives a first and last name from the filename, constructs a sensible email address using the company’s domain, generates a fake phone number, and creates the Employee record via a factory, storing the avatar’s relative path. This gives the project a rich, visually consistent set of demo employees without hard‑coding any names or images.
+              </p>
+              <div class="responsive-nav-pair">
+              <img class="rendering news section pic" src="./images/admin-station 1.png" alt="first image of PHP code seeding employees from avatars"/>
+              <img class="rendering news section pic" src="./images/admin-station 2.png" alt="second image of PHP code seeding employees from avatars"/>
             </div>
 
           </div>
