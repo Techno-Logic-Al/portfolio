@@ -121,6 +121,17 @@
     .nav-img-3 { width: var(--img3-width, 62%); }
 }
 
+.layout-section,
+.mail-php-section,
+.index-php-section,
+.employee-from-avatars-seeder-section {
+    background-image: url("../images/background.png");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 100% 100%;
+    display: flow-root;
+}
+
 .layout-section img {
     max-width: 35%;
     height: auto;
