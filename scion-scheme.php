@@ -31,7 +31,7 @@ require_once __DIR__ . '/includes/head.php';
               covering a number of topics from basic HTML to C# programming, iOS
               development, data analysis, and more. By completing courses users
               can earn points, allowing them to track their progress and see how
-              much they've covered in certain areas.<br>Total score: 5,713
+              much they've covered in certain areas.<br>Total score: 8,410
               <a id="treehouse" href="https://teamtreehouse.com/technological" target="_blank" rel="noopener noreferrer">teamtreehouse.com/technological</a>
             </p>
             <h2>about Netmatters</h2>
