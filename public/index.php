@@ -95,7 +95,7 @@ require_once __DIR__ . '/../includes/head.php';
             <article class="card" data-reveal>
               <div class="card__inner">
                 <a class="card__media media-frost" href="https://js-array.alastair-grandison.netmatters-scs.co.uk/" target="_blank" rel="noopener noreferrer">
-                  <img src="<?= htmlspecialchars(asset('images/Pick-a-pic!.png'), ENT_QUOTES, 'UTF-8'); ?>" alt="Screenshot of Pick-a-pic web app" />
+                  <img src="<?= htmlspecialchars(asset('images/Pick-a-Pic!.png'), ENT_QUOTES, 'UTF-8'); ?>" alt="Screenshot of Pick-a-pic web app" />
                 </a>
                 <div class="card__body">
                   <h3 class="card__title">Pick-a-pic web app</h3>
