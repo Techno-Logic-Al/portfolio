@@ -684,10 +684,51 @@ html[data-theme="light"] .kicker::before{
 .card[data-disabled="true"] a{pointer-events:none}
 
 .projects-cascade{
+  position: relative;
   width: 100vw;
   margin-inline: calc(50% - 50vw);
   overflow: hidden;
   padding: 0.25rem 0 1.25rem;
+}
+.projects-cascade__controls{
+  position:absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+.projects-cascade__control{
+  pointer-events: auto;
+  position:absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(5,5,9,.55);
+  color: rgba(244,245,255,.92);
+  box-shadow: 0 14px 35px rgba(0,0,0,.34);
+  display:grid;
+  place-items:center;
+  line-height: 1;
+  font-size: 28px;
+  padding: 0;
+  cursor: pointer;
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease, color .18s ease;
+}
+.projects-cascade__control--prev{left: .65rem}
+.projects-cascade__control--next{right: .65rem}
+.projects-cascade__control:hover,
+.projects-cascade__control:focus-visible{
+  outline:none;
+  transform: translateY(-50%) scale(1.04);
+  border-color: rgba(255,255,255,.28);
+  box-shadow: 0 0 18px rgba(255,43,214,.22), 0 0 14px rgba(255,106,0,.18), 0 18px 44px rgba(0,0,0,.34);
+}
+@media (max-width: 520px){
+  .projects-cascade__control{width: 40px; height: 40px; font-size: 26px}
+  .projects-cascade__control--prev{left: .4rem}
+  .projects-cascade__control--next{right: .4rem}
 }
 .projects-cascade__track{
   --projects-gap: 2rem;
@@ -715,7 +756,11 @@ html[data-theme="light"] .kicker::before{
   width: clamp(260px, 28vw, 360px);
 }
 .projects-cascade .card__media{
-  aspect-ratio: 645 / 1100;
+  /* Projects page cards: crop the bottom half of images (keep featured "mini" cards unchanged) */
+  aspect-ratio: 645 / 550;
+}
+.projects-cascade .card__media img{
+  object-position: center top;
 }
 
 .media-frost{
@@ -742,6 +787,7 @@ html[data-theme="light"] .kicker::before{
   filter: brightness(.76) saturate(.78) contrast(1.12);
   transform: scale(1.04);
 }
+.projects-cascade [data-project-key="coming-soon"] .card__media img{object-position: center}
 .projects-cascade [data-project-key="coming-soon"] .media-frost img{filter:none}
 .projects-cascade [data-project-key="coming-soon"] .media-frost::after{content:none}
 
