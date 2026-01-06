@@ -8,7 +8,7 @@ RewriteEngine On
 </FilesMatch>
 
 # Block access to non-public app directories
-RewriteRule ^(config|includes|snippets)/ - [F,L]
+RewriteRule ^(config|includes|snippets|vendor)/ - [F,L]
 
 # Serve existing files/directories in the docroot
 RewriteCond %{REQUEST_FILENAME} -f [OR]
@@ -21,4 +21,3 @@ RewriteRule ^(favicon\\.svg|site\\.webmanifest|robots\\.txt)$ public/$1 [L]
 
 # All other routes handled by the root router
 RewriteRule ^ index.php [L]
-
