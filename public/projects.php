@@ -21,6 +21,14 @@ require_once __DIR__ . '/../includes/head.php';
         </div>
 
         <div class="projects-cascade" data-projects-cascade aria-label="Projects carousel">
+          <div class="projects-cascade__controls" aria-label="Projects carousel controls">
+            <button class="projects-cascade__control projects-cascade__control--prev" type="button" data-projects-prev aria-label="Previous projects">
+              ‹
+            </button>
+            <button class="projects-cascade__control projects-cascade__control--next" type="button" data-projects-next aria-label="Next projects">
+              ›
+            </button>
+          </div>
           <div class="projects-cascade__track" data-projects-track>
             <article class="card" data-disabled="true" data-project-card data-project-key="coming-soon" aria-label="Coming soon project (not yet available)">
               <div class="card__inner">
@@ -64,7 +72,7 @@ require_once __DIR__ . '/../includes/head.php';
                   <h2 class="card__title">Netmatters homepage rebuild</h2>
                   <p class="card__meta">A full rebuild of the Netmatters homepage with responsive layout and UI details.</p>
                   <div class="card__tags">
-                    <span class="tag">HTML</span><span class="tag">Sass</span><span class="tag">JavaScript</span><span class="tag">PHP</span>
+                    <span class="tag">Sass</span><span class="tag">JavaScript</span><span class="tag">PHP</span>
                   </div>
                   <div class="card__actions">
                     <a class="btn btn--acid" href="https://netmatters.alastair-grandison.netmatters-scs.co.uk/" target="_blank" rel="noopener noreferrer">View live</a>
