@@ -1,0 +1,24 @@
+Options -Indexes
+
+RewriteEngine On
+
+# Block access to sensitive files
+<FilesMatch "(^\\.|\\.env$|composer\\.(json|lock)$|README\\.md$)">
+  Require all denied
+</FilesMatch>
+
+# Block access to non-public app directories
+RewriteRule ^(config|includes|snippets)/ - [F,L]
+
+# Serve existing files/directories in the docroot
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Map public assets when the docroot is this folder (cPanel main domain)
+RewriteRule ^(css|js|images|media)/(.*)$ public/$1/$2 [L]
+RewriteRule ^(favicon\\.svg|site\\.webmanifest|robots\\.txt)$ public/$1 [L]
+
+# All other routes handled by the root router
+RewriteRule ^ index.php [L]
+
