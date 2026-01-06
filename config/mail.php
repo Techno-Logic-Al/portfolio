@@ -11,6 +11,9 @@ if (is_readable($autoload)) {
 function sendContactEmail(array $data): bool
 {
     if (!class_exists(\PHPMailer\PHPMailer\PHPMailer::class)) {
+        if (getenv('MAIL_DEBUG') === '1') {
+            error_log('[portfolio] PHPMailer not installed (vendor/autoload.php missing or composer not run).');
+        }
         return false;
     }
 
@@ -35,7 +38,15 @@ function sendContactEmail(array $data): bool
         $mail->SMTPAuth = true;
         $mail->Username = $username;
         $mail->Password = $password;
-        $mail->SMTPSecure = $encryption;
+
+        $enc = strtolower(trim((string) $encryption));
+        if (defined(\PHPMailer\PHPMailer\PHPMailer::class . '::ENCRYPTION_STARTTLS') && $enc === 'tls') {
+            $mail->SMTPSecure = \PHPMailer\PHPMailer\PHPMailer::ENCRYPTION_STARTTLS;
+        } elseif (defined(\PHPMailer\PHPMailer\PHPMailer::class . '::ENCRYPTION_SMTPS') && ($enc === 'ssl' || $enc === 'smtps')) {
+            $mail->SMTPSecure = \PHPMailer\PHPMailer\PHPMailer::ENCRYPTION_SMTPS;
+        } else {
+            $mail->SMTPSecure = $enc;
+        }
 
         $mail->setFrom($from, 'Portfolio contact form');
         $mail->addAddress($to);
@@ -61,6 +72,14 @@ function sendContactEmail(array $data): bool
 
         return true;
     } catch (\PHPMailer\PHPMailer\Exception $e) {
+        if (getenv('MAIL_DEBUG') === '1') {
+            $safeHost = preg_replace('/[^a-z0-9\\.-]+/i', '', (string) $host);
+            $safePort = preg_replace('/[^0-9]+/', '', (string) $port);
+            error_log('[portfolio] SMTP send failed (host=' . $safeHost . ' port=' . $safePort . '): ' . $e->getMessage());
+            if (!empty($mail->ErrorInfo)) {
+                error_log('[portfolio] PHPMailer ErrorInfo: ' . $mail->ErrorInfo);
+            }
+        }
         return false;
     }
 }
