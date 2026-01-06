@@ -163,11 +163,60 @@ function initProjectsCascade() {
   const track = wrapper?.querySelector("[data-projects-track]");
   if (!wrapper || !track) return;
 
+  const prevButton = wrapper.querySelector("[data-projects-prev]");
+  const nextButton = wrapper.querySelector("[data-projects-next]");
+
   const originalCards = Array.from(track.querySelectorAll("[data-project-card]"));
   if (originalCards.length < 2) return;
 
   const centerKeys = ["admin-station", "netmatters", "pick-a-pick"];
   const speedPxPerSecond = 40;
+
+  const readTranslateX = (element) => {
+    const transform = window.getComputedStyle(element).transform;
+    if (!transform || transform === "none") return 0;
+
+    const matrixMatch = transform.match(/^matrix\((.+)\)$/);
+    if (matrixMatch) {
+      const parts = matrixMatch[1].split(",").map((value) => Number.parseFloat(value.trim()));
+      return Number.isFinite(parts[4]) ? parts[4] : 0;
+    }
+
+    const matrix3dMatch = transform.match(/^matrix3d\((.+)\)$/);
+    if (matrix3dMatch) {
+      const parts = matrix3dMatch[1].split(",").map((value) => Number.parseFloat(value.trim()));
+      return Number.isFinite(parts[12]) ? parts[12] : 0;
+    }
+
+    return 0;
+  };
+
+  const nudge = (direction) => {
+    const cards = Array.from(track.querySelectorAll("[data-project-card]:not([data-project-clone])"));
+    const firstCard = cards[0];
+    if (!firstCard) return;
+
+    const styles = window.getComputedStyle(track);
+    const gap = Number.parseFloat(styles.gap || styles.columnGap || "0") || 0;
+    const step = Math.max(1, firstCard.getBoundingClientRect().width + gap);
+
+    const currentX = readTranslateX(track);
+    const delta = direction === "next" ? -step : step;
+
+    track.style.animation = "none";
+    track.getBoundingClientRect();
+
+    track.style.setProperty("--projects-start-x", `${currentX}px`);
+    track.style.transition = "transform 240ms cubic-bezier(.2,.9,.2,1)";
+    track.style.setProperty("--projects-start-x", `${currentX + delta}px`);
+
+    window.setTimeout(() => {
+      track.style.transition = "";
+      track.style.animation = "none";
+      track.getBoundingClientRect();
+      track.style.animation = "";
+    }, 260);
+  };
 
   const makeClones = () => {
     const alreadyCloned = track.querySelector("[data-project-clone]");
@@ -238,6 +287,9 @@ function initProjectsCascade() {
   } else {
     window.addEventListener("resize", scheduleCompute, { passive: true });
   }
+
+  prevButton?.addEventListener("click", () => nudge("prev"));
+  nextButton?.addEventListener("click", () => nudge("next"));
 }
 
 function initReveals() {
