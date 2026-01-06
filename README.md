@@ -1,4 +1,4 @@
-﻿# Portfolio
+# Portfolio
 
 Personal portfolio site built with PHP, vanilla JS, and custom CSS (glass UI + animated background video).
 
@@ -23,6 +23,12 @@ Personal portfolio site built with PHP, vanilla JS, and custom CSS (glass UI + a
 From the repo root:
 
 - `php -S localhost:8000 -t public public/router.php`
+
+## cPanel (main domain) deployment
+
+If your main domain’s docroot is fixed to `public_html/` and you can’t point it at `public/`, upload the whole repo to `public_html/`.
+
+This repo includes a root `index.php` + `.htaccess` that forward requests and assets to `public/` while blocking `config/`, `includes/`, and `snippets/` from direct web access.
 
 ## `.env` configuration
 
@@ -68,7 +74,6 @@ If PHPMailer is installed (via Composer) and all SMTP values are present, the co
 
 ## Notes
 
-- Pretty URLs are configured via `public/.htaccess`. If you deploy on Nginx, you'll need equivalent rewrite rules.
+- Pretty URLs are configured via `public/.htaccess`. If you deploy on Nginx, youâ€™ll need equivalent rewrite rules.
 - This is a PHP site (not compatible with static hosts like GitHub Pages).
-
 
