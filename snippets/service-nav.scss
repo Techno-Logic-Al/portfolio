@@ -1,0 +1,49 @@
+// Sass loop that generates themed navigation dropdown styles
+$services: (
+  "design": #00e5ff,
+  "dev": #ff6a00,
+  "seo": #ff2bd6,
+);
+
+@mixin mq($min) {
+  @media (min-width: $min) {
+    @content;
+  }
+}
+
+.services-nav {
+  display: none;
+
+  @include mq(992px) {
+    display: flex;
+  }
+}
+
+@each $name, $color in $services {
+  .nav-service--#{$name} {
+    position: relative;
+    color: #fff;
+
+    &:hover,
+    &:focus-visible {
+      background: $color;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 100%;
+      transform: translateX(-50%);
+      border: 10px solid transparent;
+      border-top-color: $color;
+      opacity: 0;
+      transition: opacity 0.15s ease;
+    }
+
+    &:hover::after,
+    &:focus-visible::after {
+      opacity: 1;
+    }
+  }
+}

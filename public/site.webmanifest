@@ -1,0 +1,9 @@
+{
+  "name": "Alastair Grandison | Portfolio",
+  "short_name": "AG Portfolio",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0b0b12",
+  "theme_color": "#0b0b12",
+  "icons": []
+}
