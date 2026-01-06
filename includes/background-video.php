@@ -13,7 +13,7 @@ if (!$hasWebm && !$hasMp4) {
 ?>
 
 <div class="bg-video" aria-hidden="true">
-  <video class="bg-video__video" autoplay muted loop playsinline preload="auto">
+  <video class="bg-video__video" autoplay muted loop playsinline webkit-playsinline preload="auto">
 <?php if ($hasMp4): ?>
     <source src="<?= htmlspecialchars(asset('media/hero.mp4'), ENT_QUOTES, 'UTF-8'); ?>" type="video/mp4" />
 <?php endif; ?>
