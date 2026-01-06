@@ -68,6 +68,7 @@ If PHPMailer is installed (via Composer) and all SMTP values are present, the co
 
 ## Notes
 
-- Pretty URLs are configured via `public/.htaccess`. If you deploy on Nginx, youâ€™ll need equivalent rewrite rules.
+- Pretty URLs are configured via `public/.htaccess`. If you deploy on Nginx, you'll need equivalent rewrite rules.
 - This is a PHP site (not compatible with static hosts like GitHub Pages).
+
 
