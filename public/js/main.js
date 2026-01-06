@@ -1,5 +1,42 @@
 import { validateContactForm } from "./formValidation.js";
 
+function initBackgroundVideoAutoplay() {
+  const video = document.querySelector(".bg-video__video");
+  if (!video) return;
+
+  const prefersReducedMotion =
+    window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (prefersReducedMotion) return;
+
+  const tryPlay = async () => {
+    try {
+      video.muted = true;
+      video.defaultMuted = true;
+      video.playsInline = true;
+      await video.play();
+      return true;
+    } catch {
+      return false;
+    }
+  };
+
+  void tryPlay().then((ok) => {
+    if (ok) return;
+
+    const events = ["pointerdown", "touchstart", "click"];
+    const handler = () => {
+      void tryPlay().then((played) => {
+        if (!played) return;
+        events.forEach((eventName) => document.removeEventListener(eventName, handler, true));
+      });
+    };
+
+    events.forEach((eventName) =>
+      document.addEventListener(eventName, handler, { passive: true, capture: true })
+    );
+  });
+}
+
 function setTheme(theme) {
   document.documentElement.dataset.theme = theme;
   localStorage.setItem("mode", theme);
@@ -408,6 +445,7 @@ function initContactForm() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  initBackgroundVideoAutoplay();
   initThemeToggle();
   initHeaderAndDockAutohide();
   initProjectsCascade();
