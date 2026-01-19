@@ -51,6 +51,15 @@ require_once __DIR__ . '/../includes/head.php';
             </div>
 
             <div class="panel prose" data-glass>
+              <h2>Product filters hook (React/TypeScript)</h2>
+              <p>
+                A pure TypeScript React hook that memoizes the filtering logic and keeps all the domain rules
+                (category, price range, stock status, text search and so on) in one place.
+              </p>
+              <?php renderCodeBlock('useProductFilters.ts', 'useProductFilters.ts', 'typescript'); ?>
+            </div>
+
+            <div class="panel prose" data-glass>
               <h2>SMTP mail config (PHP)</h2>
               <p>
                 Sends a contact notification email using PHPMailer, reading SMTP configuration from environment variables.
