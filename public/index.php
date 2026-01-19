@@ -58,6 +58,24 @@ require_once __DIR__ . '/../includes/head.php';
           <div class="grid grid--cards">
             <article class="card" data-reveal>
               <div class="card__inner">
+                <a class="card__media media-frost" href="https://react.alastair-grandison.netmatters-scs.co.uk/" target="_blank" rel="noopener noreferrer">
+                  <img src="<?= htmlspecialchars(asset('images/pre-loved-pedals.png'), ENT_QUOTES, 'UTF-8'); ?>" alt="Screenshot of the Pre-loved Pedals used bike catalogue demo" />
+                </a>
+                <div class="card__body">
+                  <h3 class="card__title">Pre-loved Pedals</h3>
+                  <p class="card__meta">A used bike catalogue demo with filters, sorters and glowing glass UI.</p>
+                  <div class="card__tags">
+                    <span class="tag">React</span><span class="tag">Vite</span><span class="tag">TypeScript</span>
+                  </div>
+                  <div class="card__actions">
+                    <a class="btn btn--acid" href="https://react.alastair-grandison.netmatters-scs.co.uk/" target="_blank" rel="noopener noreferrer">View live</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="card" data-reveal>
+              <div class="card__inner">
                 <a class="card__media media-frost" href="https://laravel.alastair-grandison.netmatters-scs.co.uk/" target="_blank" rel="noopener noreferrer">
                   <img src="<?= htmlspecialchars(asset('images/admin-station.png'), ENT_QUOTES, 'UTF-8'); ?>" alt="Screenshot of Admin Station web app" />
                 </a>
@@ -69,24 +87,6 @@ require_once __DIR__ . '/../includes/head.php';
                   </div>
                   <div class="card__actions">
                     <a class="btn btn--acid" href="https://laravel.alastair-grandison.netmatters-scs.co.uk/" target="_blank" rel="noopener noreferrer">View live</a>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <article class="card" data-reveal>
-              <div class="card__inner">
-                <a class="card__media media-frost" href="https://netmatters.alastair-grandison.netmatters-scs.co.uk/" target="_blank" rel="noopener noreferrer">
-                  <img src="<?= htmlspecialchars(asset('images/Rebuilding-Netmatters-Webpage.png'), ENT_QUOTES, 'UTF-8'); ?>" alt="Screenshot of my Netmatters homepage rebuild" />
-                </a>
-                <div class="card__body">
-                  <h3 class="card__title">Netmatters homepage rebuild</h3>
-                  <p class="card__meta">A pixel-pushed rebuild of the Netmatters homepage from scratch.</p>
-                  <div class="card__tags">
-                    <span class="tag">HTML</span><span class="tag">Sass</span><span class="tag">JavaScript</span><span class="tag">PHP</span>
-                  </div>
-                  <div class="card__actions">
-                    <a class="btn btn--acid" href="https://netmatters.alastair-grandison.netmatters-scs.co.uk/" target="_blank" rel="noopener noreferrer">View live</a>
                   </div>
                 </div>
               </div>
