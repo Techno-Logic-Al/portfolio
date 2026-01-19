@@ -169,7 +169,7 @@ function initProjectsCascade() {
   const originalCards = Array.from(track.querySelectorAll("[data-project-card]"));
   if (originalCards.length < 2) return;
 
-  const centerKeys = ["admin-station", "netmatters", "pick-a-pick"];
+  const centerKeys = ["admin-station", "pick-a-pick", "latest-portfolio"];
   const speedPxPerSecond = 40;
 
   const readTranslateX = (element) => {
@@ -222,16 +222,18 @@ function initProjectsCascade() {
     const alreadyCloned = track.querySelector("[data-project-clone]");
     if (alreadyCloned) return;
 
-    originalCards.forEach((card) => {
-      const clone = card.cloneNode(true);
-      clone.dataset.projectClone = "true";
-      clone.setAttribute("aria-hidden", "true");
-      clone.querySelectorAll("a, button, input, select, textarea, summary").forEach((el) => {
-        el.setAttribute("tabindex", "-1");
-        el.setAttribute("aria-hidden", "true");
+    for (let pass = 0; pass < 2; pass += 1) {
+      originalCards.forEach((card) => {
+        const clone = card.cloneNode(true);
+        clone.dataset.projectClone = "true";
+        clone.setAttribute("aria-hidden", "true");
+        clone.querySelectorAll("a, button, input, select, textarea, summary").forEach((el) => {
+          el.setAttribute("tabindex", "-1");
+          el.setAttribute("aria-hidden", "true");
+        });
+        track.appendChild(clone);
       });
-      track.appendChild(clone);
-    });
+    }
   };
 
   const compute = () => {
