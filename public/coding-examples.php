@@ -74,6 +74,14 @@ require_once __DIR__ . '/../includes/head.php';
               </p>
               <?php renderCodeBlock('contact-handler.php', 'contact-handler.php', 'php'); ?>
             </div>
+
+            <div class="panel prose" data-glass>
+              <h2>Custom WordPress shortcode: filterable projects grid</h2>
+              <p>
+                This shortcode powers a dynamic portfolio module by querying custom project posts, applying sanitized taxonomy filters from URL/shortcode input, and rendering a reusable project-card grid with graceful empty-state handling.
+              </p>
+              <?php renderCodeBlock('functions.php', 'functions.php', 'php'); ?>
+            </div>
           </div>
         </div>
       </section>
