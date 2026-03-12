@@ -84,6 +84,24 @@ require_once __DIR__ . '/../includes/head.php';
               </div>
             </article>
 
+            <article class="card" data-project-card data-project-key="techno-logic-al-web-studio">
+              <div class="card__inner">
+                <a class="card__media media-frost" href="https://wordpress.alastair-grandison.netmatters-scs.co.uk/" target="_blank" rel="noopener noreferrer">
+                  <img src="<?= htmlspecialchars(asset('images/techno-logic-al-web-studio.png'), ENT_QUOTES, 'UTF-8'); ?>" alt="Screenshot of Techno-Logic-Al Web Studio website" />
+                </a>
+                <div class="card__body">
+                  <h2 class="card__title">Techno-Logic-Al Web Studio</h2>
+                  <p class="card__meta">Custom WordPress small-business portfolio site built with a bespoke theme.</p>
+                  <div class="card__tags">
+                    <span class="tag">PHP</span><span class="tag">PowerShell</span>
+                  </div>
+                  <div class="card__actions">
+                    <a class="btn btn--acid" href="https://wordpress.alastair-grandison.netmatters-scs.co.uk/" target="_blank" rel="noopener noreferrer">View live</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
             <article class="card" data-project-card data-project-key="latest-portfolio">
               <div class="card__inner">
                 <a class="card__media media-frost" href="https://alastair-grandison.netmatters-scs.co.uk/" target="_blank" rel="noopener noreferrer">
