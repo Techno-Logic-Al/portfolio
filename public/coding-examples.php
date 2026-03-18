@@ -82,6 +82,14 @@ require_once __DIR__ . '/../includes/head.php';
               </p>
               <?php renderCodeBlock('functions.php', 'functions.php', 'php'); ?>
             </div>
+
+            <div class="panel prose" data-glass>
+              <h2>Backend architecture, API integration, validation, retries, and deployment-ready app serving</h2>
+              <p>
+                A to-do planner app's Express backend, which securely handles AI suggestion requests, validates and sanitises the model output, retries malformed responses, and serves the production React frontend from the same service.
+              </p>
+              <?php renderCodeBlock('index.js', 'index.js', 'javascript'); ?>
+            </div>
           </div>
         </div>
       </section>
