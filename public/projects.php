@@ -138,6 +138,24 @@ require_once __DIR__ . '/../includes/head.php';
               </div>
             </article>
 
+            <article class="card" data-project-card data-project-key="ai-to-do-planner">
+              <div class="card__inner">
+                <a class="card__media media-frost" href="https://ai-to-do-app.alastair-grandison.netmatters-scs.co.uk/" target="_blank" rel="noopener noreferrer">
+                  <img src="<?= htmlspecialchars(asset('images/ai-to-do-planning.png'), ENT_QUOTES, 'UTF-8'); ?>" alt="Screenshot of the AI To-do Planner app" />
+                </a>
+                <div class="card__body">
+                  <h2 class="card__title">AI To-do Planner</h2>
+                  <p class="card__meta">A React to-do app with inline ChatGPT AI suggestions.</p>
+                  <div class="card__tags">
+                    <span class="tag">JavaScript</span>
+                  </div>
+                  <div class="card__actions">
+                    <a class="btn btn--acid" href="https://ai-to-do-app.alastair-grandison.netmatters-scs.co.uk/" target="_blank" rel="noopener noreferrer">View live</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
             <article class="card" data-disabled="true" data-project-card data-project-key="coming-soon" aria-label="Coming soon project (not yet available)">
               <div class="card__inner">
                 <div class="card__media media-frost">
