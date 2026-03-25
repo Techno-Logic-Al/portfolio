@@ -76,17 +76,17 @@ require_once __DIR__ . '/../includes/head.php';
 
             <article class="card" data-reveal>
               <div class="card__inner">
-                <a class="card__media media-frost" href="https://laravel.alastair-grandison.netmatters-scs.co.uk/" target="_blank" rel="noopener noreferrer">
-                  <img src="<?= htmlspecialchars(asset('images/admin-station.png'), ENT_QUOTES, 'UTF-8'); ?>" alt="Screenshot of Admin Station web app" />
+                <a class="card__media media-frost" href="https://blogfuel.alastair-grandison.netmatters-scs.co.uk/" target="_blank" rel="noopener noreferrer">
+                  <img src="<?= htmlspecialchars(asset('images/blogfuel.png'), ENT_QUOTES, 'UTF-8'); ?>" alt="Screenshot of BlogFuel app" />
                 </a>
                 <div class="card__body">
-                  <h3 class="card__title">admin<[station]</h3>
-                  <p class="card__meta">Admin panel for company and employee data with real workflows.</p>
+                  <h3 class="card__title">BlogFuel</h3>
+                  <p class="card__meta">Laravel SaaS app for generating, publishing, and sharing AI-polished blog articles.</p>
                   <div class="card__tags">
-                    <span class="tag">Laravel</span><span class="tag">Blade</span><span class="tag">PHP</span>
+                    <span class="tag">PHP</span><span class="tag">Blade</span>
                   </div>
                   <div class="card__actions">
-                    <a class="btn btn--acid" href="https://laravel.alastair-grandison.netmatters-scs.co.uk/" target="_blank" rel="noopener noreferrer">View live</a>
+                    <a class="btn btn--acid" href="https://blogfuel.alastair-grandison.netmatters-scs.co.uk/" target="_blank" rel="noopener noreferrer">View live</a>
                   </div>
                 </div>
               </div>
