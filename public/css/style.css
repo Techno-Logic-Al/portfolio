@@ -988,6 +988,11 @@ html[data-theme="light"] .code-block__head .code-lang{color:#dcdde4c7}
   display:block;
 }
 
+.page-coding-examples .code-block code{
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
 /* Granite mode: reduce scroll jank on the snippets page */
 html[data-theme="light"] .page-coding-examples .code-block__head,
 html[data-theme="light"] .page-coding-examples .code-block pre,
