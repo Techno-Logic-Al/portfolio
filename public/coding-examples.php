@@ -84,6 +84,14 @@ require_once __DIR__ . '/../includes/head.php';
             </div>
 
             <div class="panel prose" data-glass>
+              <h2>syncCreditPackCheckout()</h2>
+              <p>
+                This method processes a successful Stripe credit-pack purchase exactly once by recording the checkout session, locking the user row, and updating the account's credit balance in a single transaction.
+              </p>
+              <?php renderCodeBlock('StripeBillingService.php', 'StripeBillingService.php', 'php'); ?>
+            </div>
+
+            <div class="panel prose" data-glass>
               <h2>Backend architecture, API integration, validation, retries, and deployment-ready app serving</h2>
               <p>
                 A to-do planner app's Express backend, which securely handles AI suggestion requests, validates and sanitises the model output, retries malformed responses, and serves the production React frontend from the same service.
