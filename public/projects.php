@@ -66,6 +66,24 @@ require_once __DIR__ . '/../includes/head.php';
               </div>
             </article>
 
+            <article class="card" data-project-card data-project-key="blogfuel">
+              <div class="card__inner">
+                <a class="card__media media-frost" href="https://blogfuel.alastair-grandison.netmatters-scs.co.uk/" target="_blank" rel="noopener noreferrer">
+                  <img src="<?= htmlspecialchars(asset('images/blogfuel.png'), ENT_QUOTES, 'UTF-8'); ?>" alt="Screenshot of BlogFuel app" />
+                </a>
+                <div class="card__body">
+                  <h2 class="card__title">BlogFuel</h2>
+                  <p class="card__meta">Laravel SaaS app for generating, publishing, and sharing AI-polished blog articles.</p>
+                  <div class="card__tags">
+                    <span class="tag">PHP</span><span class="tag">Blade</span>
+                  </div>
+                  <div class="card__actions">
+                    <a class="btn btn--acid" href="https://blogfuel.alastair-grandison.netmatters-scs.co.uk/" target="_blank" rel="noopener noreferrer">View live</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
             <article class="card" data-project-card data-project-key="pick-a-pick">
               <div class="card__inner">
                 <a class="card__media media-frost" href="https://js-array.alastair-grandison.netmatters-scs.co.uk/" target="_blank" rel="noopener noreferrer">
